@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_follow.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_follow.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_profile.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_profile.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_up_arrow_blue.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_up_arrow_blue.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_search_glass.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_search_glass.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_up_arrow.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_up_arrow.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_follow1.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_follow1.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_following.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_following.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_following1.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xhdpi/ic_following1.png"
+    }
+]

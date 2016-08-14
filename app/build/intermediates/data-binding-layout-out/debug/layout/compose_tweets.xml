@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="500dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/composeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ADD8E6"
+        android:minHeight="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/composeToolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        tools:src="@drawable/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/ivProfileImage"
+        android:src="@drawable/ic_cancel"
+        tools:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvScreenname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivProfileImage"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/ivProfileImage"
+        android:layout_toStartOf="@+id/ivProfileImage"
+        android:text="Screen name" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvScreenname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/ivProfileImage"
+        android:layout_toStartOf="@+id/ivProfileImage"
+        android:text="User name" />
+
+    <EditText
+        android:id="@+id/etTextArea"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:background="@android:color/transparent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="-30dp"
+        tools:text="Text Area"
+        android:layout_below="@+id/ivProfileImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/TweetArea" />
+
+    <View
+        android:id="@+id/vLine_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="5px"
+        android:layout_below="@+id/etTextArea"
+        android:background="#00aced"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/vLine_separator"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/Tweet"
+        android:background="@drawable/gradient_shape"
+        android:textColor="@android:color/white"
+        android:layout_alignParentEnd="false" />
+
+    <TextView
+        android:id="@+id/tvCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignLeft="@+id/tvUsername"
+        android:layout_alignStart="@+id/tvUsername"
+        android:layout_alignTop="@+id/button"
+        android:layout_below="@+id/vLine_separator"
+        android:layout_toLeftOf="@+id/button"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:paddingRight="-10dp"
+        android:text="@string/characterCount" />
+
+</RelativeLayout>

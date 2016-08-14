@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.5.2/ecf534dba3a8446ce84cbb797d314763be212a68/glide-3.5.2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="ecf534dba3a8446ce84cbb797d314763be212a68">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.5.2_6203776920f8cf95092fb3e66dee93df9ce63cda/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.android.databinding/baseLibrary/2.1.2/d0395908c940f4171fb024435b25f7458c1147f3/baseLibrary-2.1.2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="d0395908c940f4171fb024435b25f7458c1147f3">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/baseLibrary-2.1.2_e47b7ee253af46237cd3309577adc4e7370abb6b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_d9507b42ade63e9074063f3f203a918dce13c4bc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="a07bc36e9d5f6f1d683f016c77099d9f2ed2500b">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_38dd4f5149f23da965177ac56b0e2f629a6dbdab/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.databinding/adapters/1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="3cae403175958af8baa00bed0bd6e04187d69415">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-adapters-1.1_59966f0fa5ab1699aee407c2102164c42a8b8392/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/libs/codepath-utils.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="9a9f67173c34e04d2d5609283d43f3006cc4d947">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/codepath-utils_9015082766083b14da12a2972bb3941aa0ab4f52/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.astuetz-pagerslidingtabstrip-1.0.1_10c3d79386b95249201b2bd91deddbd1650995f5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_f2eb70c29bd1e31ceac32ad6c8d8725e4186f0c0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/libs/org.apache.http.legacy.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/2/org.apache.http.legacy_953b21969b3b8d1e7db7ce3019e7d127e1f2028f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_6215aff5c2a19f8f856f6da2e17855bc321ce252/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_4de221672e9d2792c0233d153f9ceef552d977a8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/activeandroid-3.1.0-SNAPSHOT_67e1c3cd5d166f44a923f9f56c08c07d1106941f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_ea14165d5af335390d1d632df04ddab7250c2779/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="1093a2d8b4c263b54d34ef4e0f32b7eaaedfcca8">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a9eb82e5eac803c078f4fb1ed8965e3ca31133c1/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/jp.wasabeef/picasso-transformations/2.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="3fb1fe781490fcf9fa47ee2c268279f777266a6a">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/jp.wasabeef-picasso-transformations-2.1.0_7c3d4ed667b8f08bde1e3979af6e30f60f2ec1af/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/24.0.0/2943c74db6d4346ab8c6531adac91fa05c137c40/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_ae8350ea341efc713560b85c90cf9db585e934a5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/org.parceler/parceler-api/1.1.1/d081ad6f7c51627ebe2dbf157cc525cbf5e9c821/parceler-api-1.1.1.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="d081ad6f7c51627ebe2dbf157cc525cbf5e9c821">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/parceler-api-1.1.1_a6ce26746c563e5bfccb29be13354c5e24690538/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.databinding/library/1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="d985cdf99de8a63824b52d8a8efc309f9e5fbf01">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-library-1.1_dd9444f1c23b8bf88108100eea5abcdb8e92939e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="526a9f794eab830eae4f23a62c572878b3f491ab">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/httpclient-4.3.6_0e49ef2690ac98ce9ed1c9df6cb30bfe4f03987c/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_84fdf0b3b81a8b846cd208ec633330e1f6b51d62/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_40c146193bdf43e4d52bea1faaf8b41cd6c76c8e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="ca5e58104f56f918f0fb3a5b1b371ab599ae56b2">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.2.1_25a9f33b1536c4cb634aa6b2061261b3ad0c22d7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="3d2ba852ca4cb07c2e9ecbd9a56ff9456025e344">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/scribe-codepath-0.0.3_bbb40d62de0464a3fcd8d56a225830c90bd67c71/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_bbcd8ee6be2854dc9471100550acbf55c5bc3464/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="07aa74f1dee90d22616f6aa98a65bea8458cf671">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.codepath.libraries-android-oauth-handler-1.0.0_6a2f8dbf13a834c2b2912341709f90888b368a6b/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.2.1/d6f54d76edfbe779a50a8636b10fd3f555d8f780/butterknife-annotations-8.2.1.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="d6f54d76edfbe779a50a8636b10fd3f555d8f780">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.2.1_fb77fed115634597b2afe3b240fe4addd7957f53/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.9/386a4339ffe52d5d63e80f9bed8d2b1d1a418249/android-async-http-1.4.9.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="386a4339ffe52d5d63e80f9bed8d2b1d1a418249">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/android-async-http-1.4.9_c365bb9393ca2e2cc85fb66ed5f1bfc174493545/classes.dex" />
+    </item>
+
+</items>

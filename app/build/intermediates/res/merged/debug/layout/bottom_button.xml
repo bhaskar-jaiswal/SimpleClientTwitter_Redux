@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:layout_width="@dimen/BottomImageWidth"
+        android:layout_height="@dimen/BottomImageHeight"
+        android:id="@+id/ivReply"
+        tools:src="@drawable/ic_reply"
+        android:src="@drawable/ic_reply"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:id="@+id/llRetweet"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivReply"
+        android:layout_alignBottom="@+id/ivReply"
+        android:layout_toRightOf="@+id/ivReply"
+        android:layout_marginLeft="60dp">
+
+        <ImageView
+            android:layout_width="@dimen/BottomImageWidth"
+            android:layout_height="@dimen/BottomImageHeight"
+            android:id="@+id/ivReweet"
+            tools:src="@drawable/ic_action_av_repeat"
+            android:src="@drawable/ic_retweet" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            tools:text="1000"
+            android:textSize="12sp"
+            android:id="@+id/tvReweetCount"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFavorite"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivReply"
+        android:layout_alignBottom="@+id/llRetweet"
+        android:layout_toRightOf="@+id/llRetweet"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="@dimen/BottomImageWidth"
+            android:layout_height="@dimen/BottomImageHeight"
+            android:id="@+id/ivFavorite"
+            tools:src="@drawable/ic_favorite_red"
+            android:src="@drawable/ic_favorite"
+            />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            tools:text="1000"
+            android:textSize="12sp"
+            android:id="@+id/tvFavoriteCount"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/ivMessage"
+        tools:src="@drawable/ic_message"
+        android:src="@drawable/ic_message"
+        android:layout_alignTop="@+id/llFavorite"
+        android:layout_alignBottom="@+id/llFavorite"
+        android:layout_toRightOf="@+id/llFavorite"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

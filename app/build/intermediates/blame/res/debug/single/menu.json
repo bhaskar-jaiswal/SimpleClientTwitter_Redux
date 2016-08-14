@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/menu/compose_tweet.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/menu/compose_tweet.xml"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/menu/home_timeline.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/menu/home_timeline.xml"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/menu/login.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/menu/login.xml"
+    }
+]

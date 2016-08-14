@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/rvTweets"
+
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_cancel"
+        tools:src="@drawable/ic_cancel" />
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        tools:src="@drawable/ic_launcher" />
+
+    <View
+        android:id="@+id/vLine_separator0"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/ivCancel"
+        android:layout_marginTop="8dp"
+        android:background="#AAB8C2" />
+
+    <ImageView
+        android:id="@+id/ivArrowDownwards"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/vLine_separator0"
+        android:layout_alignLeft="@+id/ivCancel"
+        android:layout_marginTop="10dp"
+        tools:src="@drawable/ic_arrowdownwards"
+        android:src="@drawable/ic_arrowdownwards" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/InReplyTo"
+        android:id="@+id/tvInReplyTo"
+        android:textSize="14sp"
+        android:textColor="#AAB8C2"
+        android:layout_marginLeft="-12dp"
+        android:layout_alignBottom="@+id/ivArrowDownwards"
+        android:layout_toRightOf="@+id/ivCancel"
+        android:layout_toEndOf="@+id/ivCancel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="\@ReplyTo"
+        android:id="@+id/etTextArea"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/ivArrowDownwards"
+        android:layout_alignLeft="@+id/ivArrowDownwards"
+        android:layout_alignStart="@+id/ivArrowDownwards" />
+
+    <View
+        android:id="@+id/vLine_separator1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="#AAB8C2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reply"
+        android:id="@+id/btnReply"
+        android:background="@drawable/gradient_shape"
+        android:layout_alignTop="@+id/vLine_separator1"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tvCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnReply"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_alignTop="@+id/vLine_separator1"
+        android:layout_toLeftOf="@+id/btnReply"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:text="@string/characterCount" />
+
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.apps.simpleclienttwitter.activity.ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlUserHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/ivBackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:src="@drawable/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/ivUpArrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_up_arrow"
+            tools:src="@mipmap/ic_up_arrow"/>
+
+        <ImageView
+            android:id="@+id/ivSearchGlass"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBottom="@+id/ivUpArrow"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_search_glass"
+            tools:src="@mipmap/ic_search_glass"/>
+
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-30dp"
+            tools:src="@drawable/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/ivTweetNotification"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_alignBottom="@+id/ivProfileImage"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ivFollow"
+            android:src="@drawable/ic_favorite"
+            tools:src="@drawable/ic_favorite"/>
+
+        <ImageView
+            android:id="@+id/ivFollow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_alignBottom="@+id/ivProfileImage"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_follow1"
+            tools:src="@mipmap/ic_follow1"/>
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivProfileImage"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textSize="16sp"
+            tools:text="@string/UserName"  />
+
+        <TextView
+            android:id="@+id/tvScreenname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ivBackgroundImage"
+            android:layout_below="@+id/tvUsername"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textSize="12sp"
+            tools:text="@string/ScreenName" />
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@+id/ivBackgroundImage"
+            android:layout_below="@+id/tvScreenname"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textSize="14sp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            tools:text="@string/tagline" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlUserHeader"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="5 Following"/>
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            tools:text="5 Followers"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/llCounts"></FrameLayout>
+</RelativeLayout>
