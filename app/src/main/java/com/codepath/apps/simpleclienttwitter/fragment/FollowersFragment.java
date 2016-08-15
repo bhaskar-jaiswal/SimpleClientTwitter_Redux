@@ -3,6 +3,7 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.User;
@@ -29,6 +30,12 @@ public class FollowersFragment extends FollowFragment {
         populateTimeline();
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        progressBar_center.setVisibility(View.VISIBLE);
+    }
+
     public static FollowersFragment newInstance(String screen_name){
         FollowersFragment followersFragment = new FollowersFragment();
         Bundle bundle = new Bundle();
@@ -48,6 +55,7 @@ public class FollowersFragment extends FollowFragment {
                         ArrayList<User> list = User.getFollowList(response);
 
                         addUsers(list);
+                        progressBar_center.setVisibility(View.INVISIBLE);
                         swipeContainer.setRefreshing(false);
                     }
 

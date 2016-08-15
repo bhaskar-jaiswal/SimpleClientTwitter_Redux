@@ -31,10 +31,14 @@ public class TwitterClient extends OAuthBaseClient {
 
     public static final RequestParams params_timeline = new RequestParams();
     public static final RequestParams params_follow = new RequestParams();
+    public static final RequestParams params_search_query = new RequestParams();
+    //    public static final RequestParams params_favorites_list = new RequestParams();
     RequestParams params_user_details = new RequestParams();
     RequestParams params_post_user_status_or_reply = new RequestParams();
     RequestParams params_favorite = new RequestParams();
     RequestParams params_friendship = new RequestParams();
+    RequestParams params_friendship_update = new RequestParams();
+    RequestParams params_direct_messages = new RequestParams();
 
     String homeTimelineUrl = getApiUrl(Config.STRING_HOME_TIMELINE);
     String mentionsTimelineUrl = getApiUrl(Config.STRING_MENTIONS_TIMELINE);
@@ -43,6 +47,9 @@ public class TwitterClient extends OAuthBaseClient {
     String userTimelineUrl = getApiUrl(Config.STRING_USER_TIMELINE);
     String getFollowersUrl = getApiUrl(Config.STRING_FOLLOWERS);
     String getFriendsUrl = getApiUrl(Config.STRING_FRIENDS);
+    String getFavoritesListUrl = getApiUrl(Config.STRING_FAVORITES_LIST);
+    String getSearchResultUrl = getApiUrl(Config.STRING_SEARCH_RESULT);
+    String getDirectMessagesSentUrl = getApiUrl(Config.STRING_DIRECT_MESSAGE_SENT);
 
     String postRetweetUrl = getApiUrl(Config.STRING_RETWEET);
     String postUntweetUrl = getApiUrl(Config.STRING_UNTWEET);
@@ -50,6 +57,8 @@ public class TwitterClient extends OAuthBaseClient {
     String postUnFavoriteUrl = getApiUrl(Config.STRING_UNFAVORITE);
     String postFriendshipCreateUrl = getApiUrl(Config.STRING_FRIENDS_CREATE);
     String postFriendshipDestroyUrl = getApiUrl(Config.STRING_FRIENDS_DESTROY);
+    String postFriendshipUpdateUrl = getApiUrl(Config.STRING_FRIENDS_UPDATE);
+    String postDirectMessagesUrl = getApiUrl(Config.STRING_DIRECT_MESSAGE);
 
     public TwitterClient(Context context) {
         super(context, REST_API_CLASS, REST_URL, REST_CONSUMER_KEY, REST_CONSUMER_SECRET, REST_CALLBACK_URL);
@@ -96,6 +105,23 @@ public class TwitterClient extends OAuthBaseClient {
         getClient().get(getFriendsUrl,params_follow, handler);
     }
 
+    public void getFavoritesList(String screen_name, AsyncHttpResponseHandler handler) {
+        params_timeline.put(Config.STRING_SCREEN_NAME, screen_name);
+        params_timeline.put(Config.STRING_COUNT, Config.COUNT_20);
+        getClient().get(getFavoritesListUrl,params_timeline, handler);
+    }
+
+    public void getSearchResult(String search_query, AsyncHttpResponseHandler handler) {
+        params_search_query.put(Config.STRING_SEARCH_QUERY, search_query);
+        params_search_query.put(Config.STRING_COUNT, Config.COUNT);
+        getClient().get(getSearchResultUrl,params_search_query, handler);
+    }
+
+    public void getDirectMessagesSent(AsyncHttpResponseHandler handler) {
+        params_search_query.put(Config.STRING_COUNT, Config.COUNT);
+        getClient().get(getDirectMessagesSentUrl,params_search_query, handler);
+    }
+
     public void postUserStatus(AsyncHttpResponseHandler handler, String statusOrReply, Boolean status, String id) {
         if(!status){
             params_post_user_status_or_reply.put(Config.STATUS,statusOrReply);
@@ -133,8 +159,23 @@ public class TwitterClient extends OAuthBaseClient {
     }
 
     public void postFriendshipDestroy(AsyncHttpResponseHandler handler, String screen_name) {
+        if(params_friendship.has(Config.STRING_FOLLOW)){
+            params_friendship.remove(Config.STRING_FOLLOW);
+        }
         params_friendship.put(Config.STRING_SCREEN_NAME,screen_name);
         getClient().post(postFriendshipDestroyUrl, params_friendship, handler);
+    }
+
+    public void postFriendshipUpdate(AsyncHttpResponseHandler handler, String screen_name, String onOff) {
+        params_friendship_update.put(Config.STRING_SCREEN_NAME,screen_name);
+        params_friendship_update.put(Config.STRING_DEVICE,onOff);
+        getClient().post(postFriendshipUpdateUrl, params_friendship_update, handler);
+    }
+
+    public void postDirectMessages(AsyncHttpResponseHandler handler, String screen_name, String text) {
+        params_direct_messages.put(Config.STRING_TEXT,text);
+        params_direct_messages.put(Config.STRING_SCREEN_NAME,screen_name);
+        getClient().post(postDirectMessagesUrl, params_direct_messages, handler);
     }
 
 	/* 1. Define the endpoint URL with getApiUrl and pass a relative path to the endpoint

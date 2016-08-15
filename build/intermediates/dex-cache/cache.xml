@@ -26,7 +26,7 @@
         jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.0"
-        sha1="a07bc36e9d5f6f1d683f016c77099d9f2ed2500b">
+        sha1="6e267386cd2e11ec8c65b849fc35819bf982aea4">
         <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_38dd4f5149f23da965177ac56b0e2f629a6dbdab/classes.dex" />
     </item>
     <item
@@ -96,7 +96,7 @@
         jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.0"
-        sha1="1093a2d8b4c263b54d34ef4e0f32b7eaaedfcca8">
+        sha1="beb4b945f339e1a37ec6a057d6bb69709b9127e6">
         <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a9eb82e5eac803c078f4fb1ed8965e3ca31133c1/classes.dex" />
     </item>
     <item
@@ -126,6 +126,13 @@
         revision="23.0.0"
         sha1="d985cdf99de8a63824b52d8a8efc309f9e5fbf01">
         <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.databinding-library-1.1_dd9444f1c23b8bf88108100eea5abcdb8e92939e/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.ToxicBakery.viewpager.transforms/view-pager-transforms/1.2.32/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="392c97a8270ccf3cc7fe6e0a5d97a5e97a61e65c">
+        <dex dex="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ToxicBakery.viewpager.transforms-view-pager-transforms-1.2.32_06f1357b86d3e36c28346f0156c35b3e17128e28/classes.dex" />
     </item>
     <item
         jar="/Users/bhaskarjaiswal/.gradle/caches/modules-2/files-2.1/cz.msebera.android/httpclient/4.3.6/526a9f794eab830eae4f23a62c572878b3f491ab/httpclient-4.3.6.jar"

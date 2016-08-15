@@ -16,6 +16,10 @@
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/friends_list_layout.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/layout/friends_list_layout.xml"
+    },
+    {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/layout/activity_login.xml"
     },
@@ -164,6 +168,10 @@
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_layout_snackbar_include.xml"
     },
     {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/tweet_media_images.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/layout/tweet_media_images.xml"
+    },
+    {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_item_separator.xml"
     },
@@ -184,6 +192,10 @@
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_media_cancel_action.xml"
     },
     {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/activity_search.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/layout/activity_search.xml"
+    },
+    {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/select_dialog_multichoice_material.xml"
     },
@@ -198,6 +210,10 @@
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/activity_message.xml",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/layout/activity_message.xml"
     },
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/layout/bottom_button.xml",

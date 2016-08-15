@@ -104,6 +104,15 @@ public class ViewHolderTweet extends RecyclerView.ViewHolder {
                 }
             }
         });
+
+        ivMessage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (itemClicked != null){
+                    itemClicked.onDirectMessage(itemView, getLayoutPosition());
+                }
+            }
+        });
     }
 
     public ImageView getIvImage() {

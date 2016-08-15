@@ -52,12 +52,12 @@
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
-        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/drawable-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_list_longpressed_holo.9.png",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/drawable-mdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png",

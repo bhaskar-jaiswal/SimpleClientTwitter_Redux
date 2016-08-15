@@ -3,6 +3,7 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.Tweet;
@@ -39,6 +40,7 @@ public class MentionsTimelineFragment extends TweetsListFragment {
 
                     addTweets(list);
                     swipeContainer.setRefreshing(false);
+                    progressBar_center.setVisibility(View.INVISIBLE);
                 }
 
                 @Override

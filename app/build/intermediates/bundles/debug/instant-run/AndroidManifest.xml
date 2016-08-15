@@ -53,6 +53,8 @@
         <activity android:name="com.codepath.apps.simpleclienttwitter.activity.ProfileActivity" />
         <activity android:name="com.codepath.apps.simpleclienttwitter.activity.ReplyActivity" />
         <activity android:name="com.codepath.apps.simpleclienttwitter.activity.FeaturesActivity" />
+        <activity android:name="com.codepath.apps.simpleclienttwitter.activity.SearchActivity" />
+        <activity android:name="com.codepath.apps.simpleclienttwitter.activity.MessageActivity" />
     </application>
 
 </manifest>

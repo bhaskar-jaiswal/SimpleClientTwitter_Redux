@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_follow2.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_follow2.png"
+    },
+    {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_following1.png",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_following1.png"
     },
@@ -10,6 +14,10 @@
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_up_arrow_blue.png",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_up_arrow_blue.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_following2.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_following2.png"
     },
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_follow1.png",
@@ -30,5 +38,9 @@
     {
         "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_up_arrow.png",
         "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_up_arrow.png"
+    },
+    {
+        "merged": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_actionbar_search.png",
+        "source": "/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/src/main/res/mipmap-xxhdpi/ic_actionbar_search.png"
     }
 ]

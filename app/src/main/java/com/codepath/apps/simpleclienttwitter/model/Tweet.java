@@ -19,46 +19,46 @@ import java.util.List;
  * Created by bjaiswal on 8/3/2016.
  */
 @Table(name = "Tweet")
-@Parcel(analyze={Tweet.class, User.class})
-public class Tweet extends Model{
+@Parcel(analyze = {Tweet.class, User.class})
+public class Tweet extends Model {
 
-    @Column(name="body")
+    @Column(name = "body")
     public String body;
 
-    @Column(name="uid")
+    @Column(name = "uid")
     public long uid; // unique id for the tweet (database id)
 
-    @Column(name="userid")
+    @Column(name = "userid")
     public int userid;
 
-    @Column(name="timeline")
+    @Column(name = "timeline")
     public String timeline;
 
-    @Column(name="createdat")
+    @Column(name = "createdat")
     public String createdAt;
 
-    @Column(name="source")
+    @Column(name = "source")
     public String source;
 
-    @Column(name="user")
+    @Column(name = "user")
     public User user;
 
-    @Column(name="tweetimage")
+    @Column(name = "tweetimage")
     public String tweetimage;
 
-    @Column(name="retweetcount")
+    @Column(name = "retweetcount")
     public String retweetCount;
 
-    @Column(name="favoriteCount")
+    @Column(name = "favoriteCount")
     public String favoriteCount;
 
-    @Column(name="retweeted")
+    @Column(name = "retweeted")
     public String retweeted;
 
-    @Column(name="favorited")
+    @Column(name = "favorited")
     public String favorited;
 
-    public static Tweet fromJSON(JSONObject jsonObject){
+    public static Tweet fromJSON(JSONObject jsonObject) {
         Tweet tweet = new Tweet();
 
         try {
@@ -71,7 +71,7 @@ public class Tweet extends Model{
             tweet.favoriteCount = jsonObject.getString("favorite_count");
             tweet.retweeted = jsonObject.getString("retweeted");
             tweet.favorited = jsonObject.getString("favorited");
-            if(jsonObject.has("extended_entities")){
+            if (jsonObject.has("extended_entities")) {
                 JSONObject jsonObjExtendedEntity = jsonObject.getJSONObject("extended_entities");
                 if (jsonObjExtendedEntity.has("media")) {
                     JSONArray mediaJSONArray = jsonObjExtendedEntity.getJSONArray("media");
@@ -90,20 +90,51 @@ public class Tweet extends Model{
         return tweet;
     }
 
-    public static ArrayList<Tweet> fromJSONArray(JSONArray jsonArray){
-        ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+    public static ArrayList<Tweet> getMediaImagefromJSONArray(JSONArray jsonArray) {
+
+        ArrayList<Tweet> list = new ArrayList<Tweet>();
         long max_id = Long.MAX_VALUE;
-        for(int i=0;i<jsonArray.length();i++){
-            try{
-                JSONObject tweetJSON = jsonArray.getJSONObject(i);
-                Tweet tweet = fromJSON(tweetJSON);
-                tweets.add(tweet);
-                max_id = Math.min(max_id,tweet.getUid());
-            }catch (JSONException e){
+
+        for (int i = 0; i < jsonArray.length(); i++) {
+            try {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                if (jsonObject.has("extended_entities")) {
+                    JSONObject jsonObjExtendedEntity = jsonObject.getJSONObject("extended_entities");
+                    if (jsonObjExtendedEntity.has("media")) {
+                        JSONArray mediaJSONArray = jsonObjExtendedEntity.getJSONArray("media");
+                        for (int j = 0; j < mediaJSONArray.length(); j++) {
+                            Tweet tweet = new Tweet();
+                            tweet.body = Config.STRING_MEDIA_IMAGE;
+                            tweet.uid = jsonObject.getLong("id");
+                            tweet.tweetimage = mediaJSONArray.getJSONObject(j).getString("media_url");
+                            list.add(tweet);
+                            max_id = Math.min(max_id, tweet.getUid());
+                        }
+                    }
+                }
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
-        TwitterClient.params_timeline.put(Config.MAX_ID,max_id);
+        TwitterClient.params_timeline.put(Config.MAX_ID, max_id);
+        return list;
+    }
+
+    public static ArrayList<Tweet> fromJSONArray(JSONArray jsonArray) {
+        ArrayList<Tweet> tweets = new ArrayList<Tweet>();
+        long max_id = Long.MAX_VALUE;
+        for (int i = 0; i < jsonArray.length(); i++) {
+            try {
+                JSONObject tweetJSON = jsonArray.getJSONObject(i);
+                Tweet tweet = fromJSON(tweetJSON);
+                tweets.add(tweet);
+                max_id = Math.min(max_id, tweet.getUid());
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        TwitterClient.params_timeline.put(Config.MAX_ID, max_id);
+        TwitterClient.params_search_query.put(Config.MAX_ID, max_id);
         return tweets;
     }
 

@@ -2,6 +2,7 @@ package com.codepath.apps.simpleclienttwitter.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
@@ -9,15 +10,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.codepath.apps.simpleclienttwitter.R;
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.User;
+import com.codepath.apps.simpleclienttwitter.utility.PatternEditableBuilder;
 import com.codepath.apps.simpleclienttwitter.viewholder.ViewHolderFollow;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by bhaskarjaiswal on 8/13/16.
@@ -74,8 +78,13 @@ public class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         User user = followList.get(position);
 
         viewUserProfile.getTvUsername().setText(user.getName());
+        patternEditableBuilder(viewUserProfile.getTvUsername());
+
         viewUserProfile.getTvScreenname().setText("@"+user.getScreenName());
+        patternEditableBuilder(viewUserProfile.getTvScreenname());
+
         viewUserProfile.getTvTagline().setText(user.getTagline());
+        patternEditableBuilder(viewUserProfile.getTvTagline());
 
         if(user.getFollowing().equalsIgnoreCase(Config.TRUE)){
             Log.d("Updating ic_following","following=true");
@@ -106,5 +115,16 @@ public class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     @Override
     public int getItemCount() {
         return followList.size();
+    }
+
+    protected static void patternEditableBuilder(TextView textView) {
+        new PatternEditableBuilder().
+                addPattern(Pattern.compile("\\@(\\w+)"), Color.parseColor("#0084b4"),
+                        new PatternEditableBuilder.SpannableClickedListener() {
+                            @Override
+                            public void onSpanClicked(String text) {
+
+                            }
+                        }).into(textView);
     }
 }

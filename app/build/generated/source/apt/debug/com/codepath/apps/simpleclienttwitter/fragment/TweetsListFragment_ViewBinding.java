@@ -4,6 +4,7 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ProgressBar;
 import butterknife.Unbinder;
 import butterknife.internal.Finder;
 import com.codepath.apps.simpleclienttwitter.R;
@@ -20,6 +21,7 @@ public class TweetsListFragment_ViewBinding<T extends TweetsListFragment> implem
     target.rvTweets = finder.findRequiredViewAsType(source, R.id.rvTweets, "field 'rvTweets'", RecyclerView.class);
     target.swipeContainer = finder.findRequiredViewAsType(source, R.id.swipeContainer, "field 'swipeContainer'", SwipeRefreshLayout.class);
     target.fab = finder.findRequiredViewAsType(source, R.id.fab, "field 'fab'", FloatingActionButton.class);
+    target.progressBar_center = finder.findRequiredViewAsType(source, R.id.progressBar_center, "field 'progressBar_center'", ProgressBar.class);
   }
 
   @Override
@@ -30,6 +32,7 @@ public class TweetsListFragment_ViewBinding<T extends TweetsListFragment> implem
     target.rvTweets = null;
     target.swipeContainer = null;
     target.fab = null;
+    target.progressBar_center = null;
 
     this.target = null;
   }

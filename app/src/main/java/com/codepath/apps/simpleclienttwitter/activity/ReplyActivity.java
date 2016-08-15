@@ -19,10 +19,18 @@ public class ReplyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reply);
         Bundle bundle = new Bundle();
 
+        getSupportActionBar().hide();
+
 //        Tweet tweet = (Tweet) Parcels.unwrap(getIntent().getParcelableExtra("tweet"));
         if(savedInstanceState == null){
             fragmentReplyTweet = new ReplyTweetFragment();
             bundle.putParcelable("tweet",getIntent().getParcelableExtra("tweet"));
+            if(getIntent().hasExtra("user")){
+                bundle.putParcelable("user",getIntent().getParcelableExtra("user"));
+                bundle.putString("DirectMessage","true");
+            }else{
+                bundle.putString("DirectMessage","false");
+            }
             fragmentReplyTweet.setArguments(bundle);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.flReplyContainer, fragmentReplyTweet);

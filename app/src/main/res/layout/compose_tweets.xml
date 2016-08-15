@@ -4,14 +4,14 @@
     android:layout_width="350dp"
     android:layout_height="500dp">
 
-    <android.support.v7.widget.Toolbar
+    <!--<android.support.v7.widget.Toolbar
         android:id="@+id/composeToolbar"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:background="#ADD8E6"
         android:minHeight="?attr/actionBarSize">
 
-    </android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.Toolbar>-->
 
     <ImageView
         android:id="@+id/ivProfileImage"
@@ -74,7 +74,7 @@
         android:layout_height="5px"
         android:layout_below="@+id/etTextArea"
         android:background="#00aced"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="220dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"/>
 

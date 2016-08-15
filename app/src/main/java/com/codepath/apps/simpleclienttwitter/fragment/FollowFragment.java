@@ -53,7 +53,7 @@ public abstract class FollowFragment extends TweetsListFragment {
             public void onProfileFollowUnfollow(View itemView, int position) {
                 User user = followList.get(position);
                 String following = user.getFollowing();
-                postFollowUnfollow(user);
+                postFollowUnfollow(user, following);
 //                if(!user.getFollowing().equalsIgnoreCase(following)) {
 //                    Log.d("Updating ivFollow","same");
                 ImageView ivFollow = (ImageView) itemView.findViewById(R.id.ivFollow);
@@ -73,7 +73,7 @@ public abstract class FollowFragment extends TweetsListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = super.onCreateView(inflater, container, savedInstanceState);
-
+        progressBar_center.setVisibility(View.VISIBLE);
         rvTweets.setAdapter(followAdapter);
         return view;
     }

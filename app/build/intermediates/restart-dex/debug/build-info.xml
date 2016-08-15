@@ -4,35 +4,30 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="116584427159351"
+    timestamp="171114759787976"
     token="-6904429282702580951" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1130" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="210" />
     <task
         name="verifier"
-        duration="0" />
+        duration="45" />
 
     <artifact
-        location="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
+        location="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="114537526008980" >
+    <build timestamp="171114759787976" >
         <artifact
             location="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="116584427159351" >
-        <artifact
-            location="/Users/bhaskarjaiswal/CodePath/SimpleClientTwitter/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

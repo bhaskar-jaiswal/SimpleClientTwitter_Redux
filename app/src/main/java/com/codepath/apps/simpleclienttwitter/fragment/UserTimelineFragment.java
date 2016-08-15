@@ -3,13 +3,16 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.Tweet;
+import com.codepath.apps.simpleclienttwitter.model.User;
 import com.codepath.apps.simpleclienttwitter.twitterapi.TwitterClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -47,6 +50,7 @@ public class UserTimelineFragment extends TweetsListFragment {
                     ArrayList<Tweet> list = Tweet.fromJSONArray(response);
 
                     addTweets(list);
+                    progressBar_center.setVisibility(View.INVISIBLE);
                     swipeContainer.setRefreshing(false);
                 }
 
@@ -57,10 +61,37 @@ public class UserTimelineFragment extends TweetsListFragment {
             });
         }
     }
+
     protected void cleanupOnSwipe(){
         tweetsList.clear();
         tweetAdapter.notifyDataSetChanged();
         TwitterClient.params_timeline.remove(Config.MAX_ID);
         populateTimeline();
+    }
+
+    public void postFrienshipNotification(String screen_name, String onOff) {
+        if(isConnectionAvailable()) {
+            if(client != null){
+                client.postFriendshipUpdate(new JsonHttpResponseHandler() {
+                    @Override
+                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                        try {
+                            Log.d("Noti-response",response.getString("notifications"));
+                            progressBar_center.setVisibility(View.INVISIBLE);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                        Log.d("getFollowersList", errorResponse + "");
+                    }
+                }, screen_name, onOff);
+            }
+        }
+    }
+    public void postFollowUnfollowUser(User user, String follow) {
+        postFollowUnfollow(user, follow);
     }
 }

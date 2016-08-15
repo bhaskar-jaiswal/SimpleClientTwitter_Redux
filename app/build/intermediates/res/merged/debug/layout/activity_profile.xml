@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,7 +21,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            tools:src="@drawable/ic_launcher"/>
+            tools:src="@drawable/ic_launcher" />
 
         <ImageView
             android:id="@+id/ivUpArrow"
@@ -29,19 +30,19 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:src="@mipmap/ic_up_arrow"
-            tools:src="@mipmap/ic_up_arrow"/>
+            tools:src="@mipmap/ic_up_arrow" />
 
         <ImageView
             android:id="@+id/ivSearchGlass"
             android:layout_width="20dp"
             android:layout_height="20dp"
+            android:layout_alignBottom="@+id/ivUpArrow"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:layout_alignBottom="@+id/ivUpArrow"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
             android:src="@mipmap/ic_search_glass"
-            tools:src="@mipmap/ic_search_glass"/>
+            tools:src="@mipmap/ic_search_glass" />
 
 
         <ImageView
@@ -51,30 +52,31 @@
             android:layout_below="@+id/ivBackgroundImage"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-30dp"
-            tools:src="@drawable/ic_launcher"/>
+            tools:src="@drawable/ic_launcher" />
 
         <ImageView
             android:id="@+id/ivTweetNotification"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignBottom="@+id/ivProfileImage"
-            android:layout_marginRight="10dp"
+            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_marginRight="20dp"
             android:layout_toLeftOf="@+id/ivFollow"
-            android:src="@drawable/ic_favorite"
-            tools:src="@drawable/ic_favorite"/>
+            android:src="@drawable/ic_follow_tweet"
+            android:visibility="invisible"
+            tools:src="@drawable/ic_follow_tweet" />
 
         <ImageView
             android:id="@+id/ivFollow"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/ivBackgroundImage"
             android:layout_alignBottom="@+id/ivProfileImage"
-            android:layout_marginRight="20dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:src="@mipmap/ic_follow1"
-            tools:src="@mipmap/ic_follow1"/>
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ivBackgroundImage"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_follow2"
+            tools:src="@mipmap/ic_follow2" />
 
         <TextView
             android:id="@+id/tvUsername"
@@ -84,7 +86,7 @@
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:textSize="16sp"
-            tools:text="@string/UserName"  />
+            tools:text="@string/UserName" />
 
         <TextView
             android:id="@+id/tvScreenname"
@@ -101,14 +103,14 @@
             android:id="@+id/tvTagline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_alignLeft="@+id/ivBackgroundImage"
             android:layout_below="@+id/tvScreenname"
+            android:layout_marginTop="10dp"
+            android:autoLink="all"
+            android:linksClickable="true"
             android:paddingLeft="@dimen/activity_horizontal_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:textSize="14sp"
-            android:autoLink="all"
-            android:linksClickable="true"
             tools:text="@string/tagline" />
     </RelativeLayout>
 
@@ -119,30 +121,51 @@
         android:layout_below="@+id/rlUserHeader"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
+        android:orientation="horizontal"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:orientation="horizontal">
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
         <TextView
             android:id="@+id/tvFollowing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="5 Following"/>
+            android:textStyle="bold"
+            tools:text="5 Following" />
 
         <TextView
             android:id="@+id/tvFollowers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_marginLeft="20dp"
-            tools:text="5 Followers"/>
+            tools:text="5 Followers" />
 
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/flContainer"
+    <RelativeLayout
+        android:id="@+id/rlContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/llCounts"></FrameLayout>
+        android:layout_below="@+id/llCounts">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabsProfile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="true"
+            app:pstsDividerColor="#1dcaff"
+            app:pstsIndicatorColor="#00ACED"
+            app:pstsUnderlineColor="#19cf86"
+            android:textColor="@android:color/black"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpagerProfile"
+            android:layout_below="@+id/tabsProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" />
+    </RelativeLayout>
 </RelativeLayout>

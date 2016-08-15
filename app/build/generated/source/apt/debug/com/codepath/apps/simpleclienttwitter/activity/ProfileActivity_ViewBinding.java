@@ -1,10 +1,12 @@
 // Generated code from Butter Knife. Do not modify!
 package com.codepath.apps.simpleclienttwitter.activity;
 
+import android.support.v4.view.ViewPager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Finder;
+import com.astuetz.PagerSlidingTabStrip;
 import com.codepath.apps.simpleclienttwitter.R;
 import java.lang.IllegalStateException;
 import java.lang.Object;
@@ -27,6 +29,8 @@ public class ProfileActivity_ViewBinding<T extends ProfileActivity> implements U
     target.tvTagline = finder.findRequiredViewAsType(source, R.id.tvTagline, "field 'tvTagline'", TextView.class);
     target.tvFollowers = finder.findRequiredViewAsType(source, R.id.tvFollowers, "field 'tvFollowers'", TextView.class);
     target.tvFollowing = finder.findRequiredViewAsType(source, R.id.tvFollowing, "field 'tvFollowing'", TextView.class);
+    target.vpPagerProfile = finder.findRequiredViewAsType(source, R.id.viewpagerProfile, "field 'vpPagerProfile'", ViewPager.class);
+    target.tabStripProfile = finder.findRequiredViewAsType(source, R.id.tabsProfile, "field 'tabStripProfile'", PagerSlidingTabStrip.class);
   }
 
   @Override
@@ -45,6 +49,8 @@ public class ProfileActivity_ViewBinding<T extends ProfileActivity> implements U
     target.tvTagline = null;
     target.tvFollowers = null;
     target.tvFollowing = null;
+    target.vpPagerProfile = null;
+    target.tabStripProfile = null;
 
     this.target = null;
   }

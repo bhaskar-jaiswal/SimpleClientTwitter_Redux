@@ -3,6 +3,7 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.View;
 
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.User;
@@ -46,8 +47,8 @@ public class FollowingFragment extends FollowFragment {
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 //                    Log.d("getFriendsList", response.toString());
                         ArrayList<User> list = User.getFollowList(response);
-
                         addUsers(list);
+                        progressBar_center.setVisibility(View.INVISIBLE);
                         swipeContainer.setRefreshing(false);
                     }
 

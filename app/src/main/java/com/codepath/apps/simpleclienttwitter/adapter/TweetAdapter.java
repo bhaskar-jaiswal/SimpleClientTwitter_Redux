@@ -2,6 +2,7 @@ package com.codepath.apps.simpleclienttwitter.adapter;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.widget.RecyclerView;
@@ -9,12 +10,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.codepath.apps.simpleclienttwitter.R;
 import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.model.Tweet;
+import com.codepath.apps.simpleclienttwitter.utility.PatternEditableBuilder;
+import com.codepath.apps.simpleclienttwitter.viewholder.ViewHolderMediaImage;
 import com.codepath.apps.simpleclienttwitter.viewholder.ViewHolderTweet;
 
 import java.text.ParseException;
@@ -22,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 /**
  * Created by bjaiswal on 8/3/2016.
@@ -47,6 +52,8 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         void onRetweetTweet(View itemView, int position);
 
         void onFavoriteTweet(View itemView, int position);
+
+        void onDirectMessage(View itemView, int position);
     }
 
     public void setOnChooseOptionsActionListener(OnItemClickListener itemClicked) {
@@ -68,6 +75,10 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 View viewTweet = inflater.inflate(R.layout.item_tweet, parent, false);
                 viewholder = new ViewHolderTweet(viewTweet, onItemClick);
                 break;
+            case Config.MEDIA_IMAGE:
+                View viewMediaImage = inflater.inflate(R.layout.tweet_media_images, parent, false);
+                viewholder = new ViewHolderMediaImage(viewMediaImage, onItemClick);
+                break;
             default:
                 View viewDefault = inflater.inflate(R.layout.item_tweet, parent, false);
                 viewholder = new ViewHolderTweet(viewDefault, onItemClick);
@@ -82,6 +93,27 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             case Config.TWEET:
                 configureViewHolderTweet((ViewHolderTweet) viewHolder, position);
                 break;
+            case Config.MEDIA_IMAGE:
+                configureViewHolderMediaImage((ViewHolderMediaImage) viewHolder, position);
+                break;
+        }
+    }
+
+    private void configureViewHolderMediaImage(final ViewHolderMediaImage viewTweet, int position) {
+        Tweet tweet = (Tweet) tweetsList.get(position);
+        if (tweet != null && tweet.tweetimage != null && tweet.tweetimage.length() != 0) {
+            Glide.with(context).load(tweet.getTweetimage()).asBitmap()
+                    .into(new BitmapImageViewTarget(viewTweet.getIvMediaImage()) {
+                        @Override
+                        protected void setResource(Bitmap resource) {
+                            RoundedBitmapDrawable circularBitmapDrawable =
+                                    RoundedBitmapDrawableFactory.create(view.getContext().getResources(), resource);
+                            circularBitmapDrawable.setCornerRadius(15);
+                            viewTweet.getIvMediaImage().setImageDrawable(circularBitmapDrawable);
+                        }
+                    });
+        } else {
+            viewTweet.getIvMediaImage().setImageResource(0);
         }
     }
 
@@ -89,9 +121,16 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         Tweet tweet = (Tweet) tweetsList.get(position);
 //        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(80, 80);
         if (tweet != null) {
+
             viewTweet.getTvUsername().setText(tweet.getUser().getName());
+
             viewTweet.getTvScreenname().setText("@" + tweet.getUser().getScreenName());
+            patternEditableBuilder(viewTweet.getTvScreenname());
+
+
             viewTweet.getTvBody().setText(tweet.getBody());
+            patternEditableBuilder(viewTweet.getTvBody());
+
             tweet.setTimeline(getTwitterDate(tweet.getCreatedAt()));
             viewTweet.getTvHours().setText(tweet.getTimeline());
             viewTweet.getTvReweetCount().setText(tweet.getRetweetCount() == "0" ? "" : tweet.getRetweetCount());
@@ -157,6 +196,10 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public int getItemViewType(int position) {
         Tweet tweet = tweetsList.get(position);
+
+        if (tweet.body.equalsIgnoreCase(Config.STRING_MEDIA_IMAGE)) {
+            return Config.MEDIA_IMAGE;
+        }
         return Config.TWEET;
     }
 
@@ -182,5 +225,16 @@ public class TweetAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             e.printStackTrace();
         }
         return strBuf.toString();
+    }
+
+    protected static void patternEditableBuilder(TextView textView) {
+        new PatternEditableBuilder().
+                addPattern(Pattern.compile("\\@(\\w+)"), Color.parseColor("#0084b4"),
+                        new PatternEditableBuilder.SpannableClickedListener() {
+                            @Override
+                            public void onSpanClicked(String text) {
+
+                            }
+                        }).into(textView);
     }
 }

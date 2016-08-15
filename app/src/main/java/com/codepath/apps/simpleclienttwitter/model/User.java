@@ -47,6 +47,8 @@ public class User extends Model{
     @Column(name = "following")
     public String following;
 
+    @Column(name = "notifications")
+    public String notifications;
 
     public static User fromJSON(JSONObject jsonObject){
         User user = new User();
@@ -61,6 +63,7 @@ public class User extends Model{
             user.followersCount=jsonObject.getInt("followers_count");
             user.friendsCount=jsonObject.getInt("friends_count");
             user.following = Boolean.toString(jsonObject.getBoolean("following"));
+            user.notifications = Boolean.toString(jsonObject.getBoolean("notifications"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -85,6 +88,10 @@ public class User extends Model{
         this.following = following;
     }
 
+    public void setNotifications(String notifications) {
+        this.notifications = notifications;
+    }
+
     public String getName() {
         return name;
     }
@@ -96,10 +103,10 @@ public class User extends Model{
     public String getScreenName() {
         return screenName;
     }
-
     public String getProfileImageUrl() {
         return profileImageUrl;
     }
+
     public String getBackground_image() {
         return background_image;
     }
@@ -118,5 +125,9 @@ public class User extends Model{
 
     public String getFollowing() {
         return following;
+    }
+
+    public String getNotifications() {
+        return notifications;
     }
 }

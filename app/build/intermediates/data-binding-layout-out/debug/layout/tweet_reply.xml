@@ -32,11 +32,33 @@
         android:layout_marginTop="8dp"
         android:background="#AAB8C2" />
 
+    <RelativeLayout
+        android:id="@+id/rlayout"
+        android:layout_below="@+id/vLine_separator0"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/ivCancel"
+        android:visibility="gone"
+        android:background="#c0deed"
+        tools:background="@android:color/darker_gray">
+
+        <TextView
+            android:id="@+id/tvSendingTo"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:textColor="#0084b4"
+             />
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/ivArrowDownwards"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_below="@+id/vLine_separator0"
+        android:layout_below="@+id/rlayout"
         android:layout_alignLeft="@+id/ivCancel"
         android:layout_marginTop="10dp"
         tools:src="@drawable/ic_arrowdownwards"
@@ -61,10 +83,12 @@
         android:id="@+id/etTextArea"
         android:textSize="16sp"
         android:layout_marginTop="20dp"
+        android:autoLink="all"
+        android:linksClickable="true"
         android:background="@android:color/transparent"
         android:layout_below="@+id/ivArrowDownwards"
         android:layout_alignLeft="@+id/ivArrowDownwards"
-        android:layout_alignStart="@+id/ivArrowDownwards" />
+        android:layout_alignStart="@+id/ivArrowDownwards"/>
 
     <View
         android:id="@+id/vLine_separator1"

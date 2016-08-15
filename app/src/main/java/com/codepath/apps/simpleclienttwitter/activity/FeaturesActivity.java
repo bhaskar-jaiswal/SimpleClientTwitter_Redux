@@ -12,6 +12,7 @@ import com.codepath.apps.simpleclienttwitter.constant.Config;
 import com.codepath.apps.simpleclienttwitter.fragment.FollowFragment;
 import com.codepath.apps.simpleclienttwitter.fragment.FollowersFragment;
 import com.codepath.apps.simpleclienttwitter.fragment.FollowingFragment;
+import com.codepath.apps.simpleclienttwitter.fragment.TweetsListFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,6 +53,13 @@ public class FeaturesActivity extends AppCompatActivity {
                 ft.replace(R.id.flFeaturesContainer, followFragment);
                 ft.commit();
                 tvFollow.setText(Config.FOLLOWERS);
+                break;
+            case Config.DIRECT_MESSAGE:
+                followFragment = FollowingFragment.newInstance(TweetsListFragment.accountUser.getScreenName());
+                ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.flFeaturesContainer, followFragment);
+                ft.commit();
+                tvFollow.setText(Config.SEND_TWEET);
                 break;
         }
         ivUpArrow.setOnClickListener(new View.OnClickListener(){

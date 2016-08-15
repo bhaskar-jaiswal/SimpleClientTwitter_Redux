@@ -17,10 +17,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.apps.simpleclienttwitter.R;
+import com.codepath.apps.simpleclienttwitter.activity.MessageActivity;
 import com.codepath.apps.simpleclienttwitter.activity.ProfileActivity;
 import com.codepath.apps.simpleclienttwitter.activity.ReplyActivity;
 import com.codepath.apps.simpleclienttwitter.adapter.TweetAdapter;
@@ -71,6 +73,9 @@ public abstract class TweetsListFragment extends Fragment {
 
     @BindView(R.id.fab)
     FloatingActionButton fab;
+
+    @BindView(R.id.progressBar_center)
+    ProgressBar progressBar_center;
 
     protected abstract void populateTimeline();
 
@@ -152,6 +157,14 @@ public abstract class TweetsListFragment extends Fragment {
                     postUnFavoriteTweet(tweet, position, id);
                 }
             }
+
+            @Override
+            public void onDirectMessage(View itemView, int position) {
+                Tweet tweet = tweetsList.get(position);
+                Intent intent = new Intent(getContext(), MessageActivity.class);
+                intent.putExtra("tweet",Parcels.wrap(tweet));
+                startActivity(intent);
+            }
         });
 
         tweetDetailDialog.setOnReplyTweet(new TweetDetailDialog.OnReply() {
@@ -168,7 +181,7 @@ public abstract class TweetsListFragment extends Fragment {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             String reply = data.getExtras().getString("reply");
             String id = data.getExtras().getString("id");
-            Toast.makeText(getActivity(), reply + " " + id, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(getActivity(), reply + " " + id, Toast.LENGTH_SHORT).show();
             postUserStatus(reply, false, id);
         }
     }
@@ -178,19 +191,23 @@ public abstract class TweetsListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_tweets_list, container, false);
         ButterKnife.bind(this, v);
+        progressBar_center.setVisibility(View.VISIBLE);
 
         layoutManager = new LinearLayoutManager(getActivity());
         rvTweets.setLayoutManager(layoutManager);
 
         rvTweets.setAdapter(tweetAdapter);
 
-        if (isConnectionAvailable()) {
+        if (isConnectionAvailable() ) {
             populateTimeline();
-            retrieveUserDetails();
+            if(accountUser == null) {
+                retrieveUserDetails();
+            }
         } else {
             tweetsList.clear();
             tweetsList.addAll(Tweet.getAllTweets());
             tweetAdapter.notifyDataSetChanged();
+            progressBar_center.setVisibility(View.INVISIBLE);
         }
 
 //        ivRetweet
@@ -287,7 +304,7 @@ public abstract class TweetsListFragment extends Fragment {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
 //                Log.d("Account User",response.toString());
                 accountUser = User.fromJSON(response);
-
+                progressBar_center.setVisibility(View.INVISIBLE);
 //                Log.d("user",accountUser.getScreenname()+" "+accountUser.getUsername());
             }
 
@@ -423,9 +440,9 @@ public abstract class TweetsListFragment extends Fragment {
         }
     }
 
-    protected void postFollowUnfollow(final User user) {
+    protected void postFollowUnfollow(final User user, String follow) {
         if (isConnectionAvailable()) {
-            if (user.getFollowing().equalsIgnoreCase(Config.FALSE)) {
+            if (follow.equalsIgnoreCase(Config.FALSE)) {
                 client.postFriendshipCreate(new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -443,7 +460,7 @@ public abstract class TweetsListFragment extends Fragment {
                         Log.d("postFriendshipCreate", errorResponse.toString());
                     }
                 }, user.getScreenName());
-            } else if (user.getFollowing().equalsIgnoreCase(Config.TRUE)) {
+            } else if (follow.equalsIgnoreCase(Config.TRUE)) {
                 client.postFriendshipDestroy(new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
@@ -463,7 +480,8 @@ public abstract class TweetsListFragment extends Fragment {
                 }, user.getScreenName());
             }
         } else {
-            Toast.makeText(getActivity(), Config.NETWORK_UNAVAILABLE, Toast.LENGTH_SHORT).show();
+            Log.d("connections ?",isConnectionAvailable()+"");
+//            Toast.makeText(getActivity().getApplicationContext(), Config.NETWORK_UNAVAILABLE, Toast.LENGTH_SHORT).show();
         }
     }
 }

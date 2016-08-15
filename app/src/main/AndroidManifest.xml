@@ -47,7 +47,9 @@
         <activity android:name=".activity.TimelineActivity" />
         <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.ReplyActivity" />
-        <activity android:name=".activity.FeaturesActivity"></activity>
+        <activity android:name=".activity.FeaturesActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.MessageActivity"></activity>
     </application>
 
 </manifest>

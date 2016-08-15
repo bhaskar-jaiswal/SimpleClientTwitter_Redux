@@ -4,6 +4,7 @@ package com.codepath.apps.simpleclienttwitter.fragment;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
 import butterknife.internal.Finder;
@@ -20,6 +21,9 @@ public class ReplyTweetFragment_ViewBinding<T extends ReplyTweetFragment> implem
 
     target.ivCancel = finder.findRequiredViewAsType(source, R.id.ivCancel, "field 'ivCancel'", ImageView.class);
     target.ivProfileImage = finder.findRequiredViewAsType(source, R.id.ivProfileImage, "field 'ivProfileImage'", ImageView.class);
+    target.rlayout = finder.findRequiredViewAsType(source, R.id.rlayout, "field 'rlayout'", RelativeLayout.class);
+    target.tvSendingTo = finder.findRequiredViewAsType(source, R.id.tvSendingTo, "field 'tvSendingTo'", TextView.class);
+    target.ivArrowDownwards = finder.findRequiredViewAsType(source, R.id.ivArrowDownwards, "field 'ivArrowDownwards'", ImageView.class);
     target.tvInReplyTo = finder.findRequiredViewAsType(source, R.id.tvInReplyTo, "field 'tvInReplyTo'", TextView.class);
     target.etTextArea = finder.findRequiredViewAsType(source, R.id.etTextArea, "field 'etTextArea'", EditText.class);
     target.tvCharacters = finder.findRequiredViewAsType(source, R.id.tvCharacters, "field 'tvCharacters'", TextView.class);
@@ -33,6 +37,9 @@ public class ReplyTweetFragment_ViewBinding<T extends ReplyTweetFragment> implem
 
     target.ivCancel = null;
     target.ivProfileImage = null;
+    target.rlayout = null;
+    target.tvSendingTo = null;
+    target.ivArrowDownwards = null;
     target.tvInReplyTo = null;
     target.etTextArea = null;
     target.tvCharacters = null;

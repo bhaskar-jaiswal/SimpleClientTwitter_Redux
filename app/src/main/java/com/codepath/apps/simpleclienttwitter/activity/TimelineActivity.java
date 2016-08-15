@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ToxicBakery.viewpager.transforms.RotateUpTransformer;
 import com.astuetz.PagerSlidingTabStrip;
 import com.codepath.apps.simpleclienttwitter.R;
 import com.codepath.apps.simpleclienttwitter.fragment.HomeTimelineFragment;
@@ -41,6 +42,8 @@ public class TimelineActivity extends AppCompatActivity {
         tweetPagerAdapter = new TweetPagerAdapter(getSupportFragmentManager());
 
         vpPager.setAdapter(tweetPagerAdapter);
+        vpPager.setPageTransformer(true,new RotateUpTransformer());
+        vpPager.setOffscreenPageLimit(3);
         tabStrip.setViewPager(vpPager);
 
 //        setSupportActionBar(toolbar);
@@ -99,7 +102,4 @@ public class TimelineActivity extends AppCompatActivity {
             return tabsList.length;
         }
     }
-
-
-
 }
