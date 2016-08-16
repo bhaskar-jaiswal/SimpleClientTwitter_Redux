@@ -49,15 +49,13 @@ The following **additional** features are implemented:
 * [X] Swipe to Refresh
 * [X] Same fragment is used for sending direct messages and replying to a tweet
 
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/e3x59o6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+http://i.imgur.com/e3x59o6.gif
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
 ## Notes
 
 Describe any challenges encountered while building the app.
